@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+body {
+  font-family: "Press Start 2P", cursive;
+}
+
+.content-cont {
+  display: flex;
+}
+@media (max-width: 1278px) {
+  .content-cont {
+    display: block;
+  }
+}
+
+.mw {
+  max-width: 1294px;
+}
+
+.title {
+  background-color: #c3d2fe;
+  height: 70px;
+  word-wrap: break-word;
+  line-height: 70px;
+}
+@media (max-width: 327px) {
+  .title {
+    line-height: 30px;
+  }
+}
+
+.display {
+  display: inline-block;
+  min-width: 340px;
+  height: 700px;
+  text-align: center;
+  background-image: linear-gradient(50deg, rgb(47, 20, 146), rgb(247, 0, 255));
+}
+.display img {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .display img {
+    position: relative;
+    top: 25%;
+  }
+}
+@media (max-width: 1278px) {
+  .display {
+    max-width: 320px;
+    min-width: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+    max-height: 320px;
+    display: block;
+  }
+}
+
+.attr-cont {
+  max-width: 930px;
+  text-align: center;
+}
+.attr-cont .card-attr {
+  display: inline-block;
+  width: 285px;
+  height: 164px;
+  margin: 20px 10px;
+}
+@media (max-width: 1278px) {
+  .attr-cont {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}/*# sourceMappingURL=App.css.map */
