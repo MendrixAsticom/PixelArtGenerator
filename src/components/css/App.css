@@ -49,7 +49,7 @@ body {
 @media (max-width: 1278px) {
   .display {
     max-width: 320px;
-    min-width: 0px;
+    min-width: auto;
     margin-right: auto;
     margin-left: auto;
     height: auto;
@@ -67,6 +67,16 @@ body {
   width: 285px;
   height: 164px;
   margin: 20px 10px;
+}
+.attr-cont .card-attr-child {
+  height: -webkit-fill-available;
+}
+@media (max-width: 347px) {
+  .attr-cont .card-attr {
+    max-width: 285px;
+    width: auto;
+    max-height: 164px;
+  }
 }
 @media (max-width: 1278px) {
   .attr-cont {

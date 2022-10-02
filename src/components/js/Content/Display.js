@@ -1,10 +1,10 @@
 import React from 'react'
-import template from '../../images/PiskelTemplate.png';
+import template from '../../images/default.png';
 
 function Display() {
   return (
     <div className='display' style={{ outline: "2px solid green" }}>
-        <img src={template} />
+        <img src={template} alt=""/>
     </div>
   )
 }

@@ -1,0 +1,7 @@
+skin1- #f2bec7
+skin2- #562b08
+skin3- #dff6ff
+skin4- #ca955c
+skin5- #efef90
+skin6- #ffffff
+skin7- #8a7a7a
