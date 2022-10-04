@@ -2,8 +2,6 @@ import React from 'react'
 
 function Gpath({attr,type,color}) {
     
-    
-    console.log(color);
     var defaultTemp = <g
                     transform="translate(0.000000,320.000000) scale(0.100000,-0.100000)"
                     fill="black"

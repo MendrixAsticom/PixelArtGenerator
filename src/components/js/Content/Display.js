@@ -2,7 +2,6 @@ import React from 'react'
 import TemplateSVG from '../TemplateSVG';
 
 function Display({displayState,passedState}) {
-  console.log(displayState);
   var skinType = displayState.displaySkin[0];
   var skinColor = displayState.displaySkin[1];
   var eyesType = displayState.displayEyes[0];
@@ -15,7 +14,6 @@ function Display({displayState,passedState}) {
   var shoesColor = displayState.displayShoes[1];
   var weaponType = displayState.displayWeapon[0];
   var weaponColor = displayState.displayWeapon[1];
-
   return (
     <>
       <div className='template' style={{ outline: "2px solid green" }}>

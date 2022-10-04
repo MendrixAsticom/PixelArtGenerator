@@ -49,7 +49,7 @@ function Content() {
   });
 
   const [decoration,setDecoration] = useState({
-    description:"Decorations",
+    description:"Decoration",
     choice:masterList.decoration.type[0],
     color:masterList.decoration.colors[0],
     array:masterList.decoration,
@@ -65,7 +65,7 @@ function Content() {
     displayClothes:[clothes.choice,clothes.color],
     displayDecoration:[decoration.choice,decoration.color]
   });
-
+  console.log(displayState);
   const [clickedButton,setClickedButton] = useState("");
   const [modalShow, setModalShow] = useState(false);
   const [modalContent, setModalContent] = useState("");
