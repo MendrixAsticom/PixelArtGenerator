@@ -1,7 +1,7 @@
 import React from 'react';
 // import { useState } from 'react';
 
-function Attribute({modalState,setModalContent,currentState,set_state,array,setClickedButton}) {
+function Attribute({modalState,setModalContent,currentState,set_state,array,setClickedButton,setDisplayState}) {
   
   function modalOpen(){
     modalState(true);
@@ -17,7 +17,14 @@ function Attribute({modalState,setModalContent,currentState,set_state,array,setC
     set_state(prevState =>{
       let data={...prevState};
       data.index = index;
-      data.choices = data.array.type[index];
+      data.choice = data.array.type[index];
+      return data;
+    });
+    var temp= "display"+currentState.description;
+
+    setDisplayState(prevState => {
+      let data = {...prevState};
+      data[temp][0] = currentState.array.type[index];
       return data;
     });
   }
@@ -30,7 +37,13 @@ function Attribute({modalState,setModalContent,currentState,set_state,array,setC
     set_state(prevState =>{
       let data={...prevState};
       data.index = index;
-      data.choices = data.array.type[index];
+      data.choice = data.array.type[index];
+      return data;
+    });
+    var temp= "display"+currentState.description;
+    setDisplayState(prevState => {
+      let data = {...prevState};
+      data[temp][0] = currentState.array.type[index];
       return data;
     });
   }
@@ -60,7 +73,7 @@ function Attribute({modalState,setModalContent,currentState,set_state,array,setC
             <button onClick={changeTypeLeft}><i className="bi bi-caret-left-fill"></i></button>
           </div>
           <div>
-            <div>{currentState.choices}</div>
+            <div>{currentState.choice}</div>
           </div>
           <div>
             <button onClick={changeTypeRight}><i className="bi bi-caret-right-fill"></i></button>

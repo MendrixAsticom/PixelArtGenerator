@@ -28,26 +28,26 @@ body {
   }
 }
 
-.display {
+.template {
   display: inline-block;
   min-width: 340px;
   height: 700px;
   text-align: center;
   background-image: linear-gradient(50deg, rgb(47, 20, 146), rgb(247, 0, 255));
 }
-.display img {
+.template svg {
   max-width: 100%;
   max-height: 100%;
   position: relative;
 }
 @media (min-width: 768px) {
-  .display img {
+  .template svg {
     position: relative;
     top: 25%;
   }
 }
 @media (max-width: 1278px) {
-  .display {
+  .template {
     max-width: 320px;
     min-width: auto;
     margin-right: auto;
@@ -55,6 +55,19 @@ body {
     height: auto;
     max-height: 320px;
     display: block;
+  }
+}
+
+.eyes, .clothes, .shoes, .skin, .cloth_decor, .weapon {
+  background: none;
+  position: absolute;
+}
+@media (max-width: 1278px) {
+  .eyes, .clothes, .shoes, .skin, .cloth_decor, .weapon {
+    width: 100%;
+    top: 118px !important;
+    left: 0;
+    right: 0;
   }
 }
 

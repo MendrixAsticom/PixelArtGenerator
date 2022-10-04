@@ -6,10 +6,11 @@ import PrintButton from './Content/PrintButton';
 import masterList from './masterList';
 import ModalPopUp from './ModalPopUp';
 
+
 function Content() {
   const [skin,setSkin] = useState({
     description:"Skin",
-    choices:masterList.skin.type[0],
+    choice:masterList.skin.type[0],
     color:masterList.skin.colors[0],
     array:masterList.skin,
     index:0
@@ -17,7 +18,7 @@ function Content() {
 
   const [weapon,setWeapon] = useState({
     description:"Weapon",
-    choices:masterList.weapon.type[0],
+    choice:masterList.weapon.type[0],
     color:masterList.weapon.colors[0],
     array:masterList.weapon,
     index:0
@@ -25,7 +26,7 @@ function Content() {
 
   const [shoes,setShoes] = useState({
     description:"Shoes",
-    choices:masterList.shoes.type[0],
+    choice:masterList.shoes.type[0],
     color:masterList.shoes.colors[0],
     array:masterList.shoes,
     index:0
@@ -33,7 +34,7 @@ function Content() {
 
   const [eyes,setEyes] = useState({
     description:"Eyes",
-    choices:masterList.eyes.type[0],
+    choice:masterList.eyes.type[0],
     color:masterList.eyes.colors[0],
     array:masterList.eyes,
     index:0
@@ -41,7 +42,7 @@ function Content() {
 
   const [clothes,setClothes] = useState({
     description:"Clothes",
-    choices:masterList.clothes.type[0],
+    choice:masterList.clothes.type[0],
     color:masterList.clothes.colors[0],
     array:masterList.clothes,
     index:0
@@ -49,12 +50,22 @@ function Content() {
 
   const [decoration,setDecoration] = useState({
     description:"Decorations",
-    choices:masterList.decoration.type[0],
+    choice:masterList.decoration.type[0],
     color:masterList.decoration.colors[0],
     array:masterList.decoration,
     index:0
   });
   
+
+  const [displayState,setDisplayState] =useState({
+    displaySkin:[skin.choice,skin.color],
+    displayWeapon:[weapon.choice,weapon.color],
+    displayShoes:[shoes.choice,shoes.color],
+    displayEyes:[eyes.choice,eyes.color],
+    displayClothes:[clothes.choice,clothes.color],
+    displayDecoration:[decoration.choice,decoration.color]
+  });
+
   const [clickedButton,setClickedButton] = useState("");
   const [modalShow, setModalShow] = useState(false);
   const [modalContent, setModalContent] = useState("");
@@ -81,7 +92,7 @@ function Content() {
   }
   return (
     <div className='container col-12 mw content-cont mb-5'>
-      <Display/>
+      <Display displayState={displayState} passedState={passedState}/>
       <div className='attr-cont d-flex flex-column justify-content-between' style={{outline:"2px red solid"}}>
         <div>
           {/* skin */}
@@ -91,7 +102,8 @@ function Content() {
             currentState={skin}
             set_state={setSkin}
             array={skin.array}
-            setClickedButton={setClickedButton}
+            setClickedButton = {setClickedButton}
+            setDisplayState = {setDisplayState}
           />
           {/* weapon */}
           <Attribute
@@ -101,6 +113,7 @@ function Content() {
             set_state={setWeapon}
             array={weapon.array}
             setClickedButton={setClickedButton}
+            setDisplayState = {setDisplayState}
           />
           {/* shoes */}
           <Attribute
@@ -110,6 +123,7 @@ function Content() {
             set_state={setShoes}
             array={shoes.array}
             setClickedButton={setClickedButton}
+            setDisplayState = {setDisplayState}
           />
           {/* eyes */}
           <Attribute
@@ -119,6 +133,7 @@ function Content() {
             set_state={setEyes}
             array={eyes.array}
             setClickedButton={setClickedButton}
+            setDisplayState = {setDisplayState}
           />
           {/* clothes */}
           <Attribute
@@ -128,6 +143,7 @@ function Content() {
             set_state={setClothes}
             array={clothes.array}
             setClickedButton={setClickedButton}
+            setDisplayState = {setDisplayState}
           />
           {/* decorations */}
           <Attribute
@@ -137,6 +153,7 @@ function Content() {
             set_state={setDecoration}
             array={decoration.array}
             setClickedButton={setClickedButton}
+            setDisplayState = {setDisplayState}
           />
         </div>
         <div>
@@ -149,6 +166,7 @@ function Content() {
         modalContent = {modalContent}
         passedState={passedState}
         setPassedState={setPassedState}
+        setDisplayState = {setDisplayState}
       />
     </div>
   )

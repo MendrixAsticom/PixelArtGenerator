@@ -1,5 +1,0 @@
-eyes1- BLACK
-eyes2- BLACK
-eyes3- #73777b - #E0D8B0 
-eyes4- #72FFFF
-eyes5- #9900F0 - #480032

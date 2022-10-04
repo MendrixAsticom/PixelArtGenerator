@@ -2,7 +2,7 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-function ModalPopUp({show,onHide,modalContent,passedState,setPassedState}) {
+function ModalPopUp({show,onHide,modalContent,passedState,setPassedState,setDisplayState}) {
   var colors=[""];
   if(modalContent !== ''){
     colors=modalContent.split(" ");
@@ -16,6 +16,13 @@ function ModalPopUp({show,onHide,modalContent,passedState,setPassedState}) {
     setPassedState(prevState =>{
       let data={...prevState};
       prevState.color = clickedColor;
+      return data;
+    });
+    var temp = "display"+ passedState.description;
+    console.log(temp);
+    setDisplayState(prevState => {
+      let data={...prevState};
+      prevState[temp][1] = clickedColor;
       return data;
     });
   }
