@@ -39,9 +39,9 @@ function ModalPopUp({show,onHide,modalContent,passedState,setPassedState,setDisp
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <div onClick={changeButtonColor}>
+        <div className='d-flex gap-2' onClick={changeButtonColor}>
           { 
-            colors.map(content=> { return <div onClick={onHide} key={content} style={{backgroundColor:content, width:"20px", height:"20px",display:"inline-block"}}></div>})
+            colors.map(content=> { return <div className="modal-color" onClick={onHide} key={content} style={{backgroundColor:content}}></div>})
           }
         </div>
       </Modal.Body>

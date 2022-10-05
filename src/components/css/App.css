@@ -107,4 +107,10 @@ body {
 .btn:focus, .btn:active {
   outline: none !important;
   box-shadow: none;
+}
+
+.modal-color {
+  width: 30px;
+  height: 30px;
+  border: rgba(0, 0, 0, 0.16) solid;
 }/*# sourceMappingURL=App.css.map */
