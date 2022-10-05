@@ -16,27 +16,29 @@ function Display({displayState,passedState}) {
   var weaponColor = displayState.displayWeapon[1];
   return (
     <>
-      <div className='template' style={{ outline: "2px solid green" }}>
-        <TemplateSVG attr="none" type={"default"} color={"none"}/>
-      </div>
-      
-      <div className='template skin'>
-        <TemplateSVG attr={"skin"} type={skinType} color={skinColor}/>
-      </div>
-      <div className='template eyes'>
-        <TemplateSVG attr={"eyes"} type={eyesType} color={eyesColor}/>
-      </div>
-      <div className='template clothes'>
-        <TemplateSVG attr={"clothes"} type={clothesType} color={clothesColor}/>
-      </div>
-      <div className='template cloth_decor'>
-        <TemplateSVG attr={"decoration"} type={decorationType} color={decorationColor}/>
-      </div>
-      <div className='template shoes'>
-        <TemplateSVG attr={"shoes"} type={shoesType} color={shoesColor}/>
-      </div>
-      <div className='template weapon'>
-        <TemplateSVG attr={"weapon"} type={weaponType} color={weaponColor}/>
+      <div id="print-display">
+        <div className='template'>
+          <TemplateSVG attr="none" type={"default"} color={"none"}/>
+        </div>
+        
+        <div className='template skin'>
+          <TemplateSVG attr={"skin"} type={skinType} color={skinColor}/>
+        </div>
+        <div className='template eyes'>
+          <TemplateSVG attr={"eyes"} type={eyesType} color={eyesColor}/>
+        </div>
+        <div className='template clothes'>
+          <TemplateSVG attr={"clothes"} type={clothesType} color={clothesColor}/>
+        </div>
+        <div className='template cloth_decor'>
+          <TemplateSVG attr={"decoration"} type={decorationType} color={decorationColor}/>
+        </div>
+        <div className='template shoes'>
+          <TemplateSVG attr={"shoes"} type={shoesType} color={shoesColor}/>
+        </div>
+        <div className='template weapon'>
+          <TemplateSVG attr={"weapon"} type={weaponType} color={weaponColor}/>
+        </div>
       </div>
     </>
   )

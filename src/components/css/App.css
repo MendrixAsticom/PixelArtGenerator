@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 body {
+  padding: 0 !important;
+  overflow: auto !important;
   font-family: "Press Start 2P", cursive;
 }
 
@@ -29,6 +31,7 @@ body {
 }
 
 .template {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   display: inline-block;
   min-width: 340px;
   height: 700px;
@@ -61,6 +64,7 @@ body {
 .eyes, .clothes, .shoes, .skin, .cloth_decor, .weapon {
   background: none;
   position: absolute;
+  margin-left: -340px;
 }
 @media (max-width: 1278px) {
   .eyes, .clothes, .shoes, .skin, .cloth_decor, .weapon {
@@ -68,6 +72,7 @@ body {
     top: 118px !important;
     left: 0;
     right: 0;
+    margin: auto;
   }
 }
 
@@ -76,6 +81,7 @@ body {
   text-align: center;
 }
 .attr-cont .card-attr {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: inline-block;
   width: 285px;
   height: 164px;
@@ -98,12 +104,7 @@ body {
   }
 }
 
-.print-relative {
-  position: relative;
-  top: 25vh;
-}
-
-.print-attr-absolute {
-  position: absolute;
-  margin-top: 120px;
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none;
 }/*# sourceMappingURL=App.css.map */

@@ -20,7 +20,7 @@ function masterList() {
             type:["default","Shades_1","Shades_2"]
         },
         clothes:{
-            colors:["#0000ff","#008000","#4b0082","#ff0000","#8f00ff","#ffffff","#ffff00"],
+            colors:["#ffffff","#0000ff","#008000","#4b0082","#ff0000","#8f00ff","#ffff00"],
             type:["Tank_Top","Coat","Shirt"]
         },
         decoration:{

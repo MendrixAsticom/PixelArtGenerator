@@ -80,7 +80,7 @@ function Attribute({modalState,setModalContent,currentState,set_state,array,setC
           </div>
         </div>
         <div className='d-flex justify-content-center h-25'>
-          <button  className='flex-fill mx-3 mb-1' style={{backgroundColor:currentState.color,color:fontColor}} onClick={ modalOpen }> {String(currentState.color)} </button>
+          <button  className='flex-fill mx-3 mb-1 btn rounded-0 border-2 border-dark btn-color' style={{backgroundColor:currentState.color,color:fontColor}} onClick={ modalOpen }> {String(currentState.color)} </button>
         </div>
       </div>
     </div>

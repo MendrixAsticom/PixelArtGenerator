@@ -5,6 +5,7 @@ import Attribute from './Content/Attribute';
 import PrintButton from './Content/PrintButton';
 import masterList from './masterList';
 import ModalPopUp from './ModalPopUp';
+import RandomButton from './Content/RandomButton';
 
 
 function Content() {
@@ -56,7 +57,6 @@ function Content() {
     index:0
   });
   
-
   const [displayState,setDisplayState] =useState({
     displaySkin:[skin.choice,skin.color],
     displayWeapon:[weapon.choice,weapon.color],
@@ -92,7 +92,7 @@ function Content() {
   return (
     <div className='container col-12 mw content-cont mb-5'>
       <Display displayState={displayState} passedState={passedState}/>
-      <div className='attr-cont d-flex flex-column justify-content-between' style={{outline:"2px red solid"}}>
+      <div className='attr-cont d-flex flex-column justify-content-between'>
         <div>
           {/* skin */}
           <Attribute 
@@ -155,8 +155,26 @@ function Content() {
             setDisplayState = {setDisplayState}
           />
         </div>
-        <div>
+        <div className='d-flex flex-sm-row flex-column mx-5 mx-sm-0 justify-content-around py-4'>
+          <div className="spacer"></div>
+          <RandomButton 
+            setSkin = {setSkin}
+            setWeapon = {setWeapon}
+            setShoes = {setShoes}
+            setEyes = {setEyes}
+            setClothes = {setClothes}
+            setDecoration = {setDecoration}
+            skin = {skin}
+            weapon = {weapon}
+            shoes = {shoes}
+            eyes = {eyes}
+            clothes = {clothes}
+            decoration = {decoration}
+            setDisplayState = {setDisplayState}
+            
+          />
           <PrintButton/>
+          <div className="spacer"></div>
         </div>
       </div>  
       <ModalPopUp
