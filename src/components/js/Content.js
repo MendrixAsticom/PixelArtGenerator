@@ -65,7 +65,6 @@ function Content() {
     displayClothes:[clothes.choice,clothes.color],
     displayDecoration:[decoration.choice,decoration.color]
   });
-  console.log(displayState);
   const [clickedButton,setClickedButton] = useState("");
   const [modalShow, setModalShow] = useState(false);
   const [modalContent, setModalContent] = useState("");
@@ -86,7 +85,7 @@ function Content() {
   }else if(clickedButton === "Clothes"){
     passedState = clothes;
     setPassedState = setClothes;
-  }else if(clickedButton === "Decorations"){
+  }else if(clickedButton === "Decoration"){
     passedState = decoration;
     setPassedState = setDecoration;
   }
