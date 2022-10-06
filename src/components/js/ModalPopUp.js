@@ -18,7 +18,7 @@ function ModalPopUp({show,onHide,modalContent,passedState,setPassedState,setDisp
       let data={...prevState};
       console.log("clickedColor",clickedColor);
       console.log("prevColor",prevState.color);
-      prevState.color = clickedColor;
+      data.color = clickedColor;
       console.log("data",data);
       return data;
     });
