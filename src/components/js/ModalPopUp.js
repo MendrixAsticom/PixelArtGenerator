@@ -16,12 +16,13 @@ function ModalPopUp({show,onHide,modalContent,passedState,setPassedState,setDisp
     console.log("changeButtonColor",clickedColor);
     setPassedState(prevState =>{
       let data={...prevState};
-      console.log("currentColor",clickedColor);
+      console.log("clickedColor",clickedColor);
       console.log("prevColor",prevState.color);
       prevState.color = clickedColor;
       console.log("data",data);
       return data;
     });
+    console.log("passedState",passedState);
     var temp = "display"+ passedState.description;
     setDisplayState(prevState => {
       let data={...prevState};
