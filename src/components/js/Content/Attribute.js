@@ -63,7 +63,9 @@ function Attribute({modalState,setModalContent,currentState,set_state,array,setC
     return finalHex;
   }
   var fontColor = "#"+invertHex(standardize_color(currentState.color).slice(1));
-
+  if (currentState.description === "Skin"){
+    console.log("currentState",currentState);
+  }
   return (<>
     <div className='card-attr' style={{outline:"2px green solid"}}>
       <div className='card-attr-child d-flex flex-column'>

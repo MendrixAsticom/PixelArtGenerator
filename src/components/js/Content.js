@@ -16,7 +16,7 @@ function Content() {
     array:masterList.skin,
     index:0
   });
-
+  console.log("skin",skin);
   const [weapon,setWeapon] = useState({
     description:"Weapon",
     choice:masterList.weapon.type[0],
@@ -65,6 +65,7 @@ function Content() {
     displayClothes:[clothes.choice,clothes.color],
     displayDecoration:[decoration.choice,decoration.color]
   });
+  console.log("displayState",displayState);
   const [clickedButton,setClickedButton] = useState("");
   const [modalShow, setModalShow] = useState(false);
   const [modalContent, setModalContent] = useState("");
