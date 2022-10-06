@@ -16,7 +16,6 @@ function Content() {
     array:masterList.skin,
     index:0
   });
-  console.log("skin",skin);
   const [weapon,setWeapon] = useState({
     description:"Weapon",
     choice:masterList.weapon.type[0],
