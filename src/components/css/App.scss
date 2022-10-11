@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+$font:'Press Start 2P', cursive;
+$light_blue:#c3d2fe;
 body {
     padding:0 !important;
     overflow:auto !important;
-    font-family: 'Press Start 2P', cursive;
+    font-family: $font;
 }
 
 .content-cont{
@@ -16,7 +19,7 @@ body {
     max-width: 1294px;
 }
 .title{
-    background-color:#c3d2fe;
+    background-color:$light_blue;
     height:70px;
     word-wrap:break-word;
     line-height: 70px;
